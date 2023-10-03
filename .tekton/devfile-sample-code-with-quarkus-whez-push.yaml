@@ -216,6 +216,8 @@ spec:
         value: $(params.image-expires-after)
       - name: COMMIT_SHA
         value: $(tasks.clone-repository.results.commit)
+      - name: SBOM_REPO
+        value: quay.io/redhat-user-workloads-stage/lucarval-tenant/devfile-sample-code-with-quarkus-2/devfile-sample-code-with-quarkus-whez
       runAfter:
       - prefetch-dependencies
       taskRef:
@@ -223,7 +225,7 @@ spec:
         - name: name
           value: buildah
         - name: bundle
-          value: quay.io/redhat-appstudio-tekton-catalog/task-buildah:0.1@sha256:97f21661e237735af04b37feeeaedd328424bfa0ebd4cd0f79ac39cde17137f6
+          value: quay.io/lucarval/task-buildah@sha256:2ceef0b95c4c551191adfc72f8eea8704551abbec44c82f4d55141d0f17dd837
         - name: kind
           value: task
         resolver: bundles
