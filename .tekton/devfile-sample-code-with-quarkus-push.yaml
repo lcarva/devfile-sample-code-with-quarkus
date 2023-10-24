@@ -223,7 +223,7 @@ spec:
         - name: name
           value: buildah
         - name: bundle
-          value: quay.io/lucarval/task-buildah:0.1-03f1061c5aad231387c2af18c2bc5ec1462c37bb@sha256:f30f9ed0c99345feddaad024c7f45653ff1e58925bcd1da95779bb8ac040a1bf
+          value: quay.io/lucarval/task-buildah:0.1-11c68538e34c0283afbfb17cb5df2995053f479f
         - name: kind
           value: task
         resolver: bundles
