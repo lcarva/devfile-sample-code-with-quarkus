@@ -163,7 +163,7 @@ spec:
         - name: name
           value: git-clone
         - name: bundle
-          value: quay.io/redhat-appstudio-tekton-catalog/task-git-clone:0.1@sha256:45b3ae2fef436c25bb050962095cc370e8320af71d3feaadf371995b43883a47
+          value: quay.io/lucarval/task-git-clone:0.1-6c24fbcdca014d4bf276f56569c9d37eb7a4dd75
         - name: kind
           value: task
         resolver: bundles
@@ -216,6 +216,8 @@ spec:
         value: $(params.image-expires-after)
       - name: COMMIT_SHA
         value: $(tasks.clone-repository.results.commit)
+      - name: SOURCE
+        value: $(tasks.clone-repository.results.source)
       runAfter:
       - prefetch-dependencies
       taskRef:
@@ -223,7 +225,7 @@ spec:
         - name: name
           value: buildah
         - name: bundle
-          value: quay.io/lucarval/task-buildah:0.1-0b17c4759c39595af9ddf74a9449dd20825fc310
+          value: quay.io/lucarval/task-buildah:0.1-6c24fbcdca014d4bf276f56569c9d37eb7a4dd75
         - name: kind
           value: task
         resolver: bundles
