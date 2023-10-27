@@ -163,7 +163,7 @@ spec:
         - name: name
           value: git-clone
         - name: bundle
-          value: quay.io/lucarval/task-git-clone:0.1-6c24fbcdca014d4bf276f56569c9d37eb7a4dd75
+          value: quay.io/lucarval/task-git-clone:0.1-e149e03e72fcfc324af178909c2fab30f2590104
         - name: kind
           value: task
         resolver: bundles
@@ -225,7 +225,7 @@ spec:
         - name: name
           value: buildah
         - name: bundle
-          value: quay.io/lucarval/task-buildah:0.1-6c24fbcdca014d4bf276f56569c9d37eb7a4dd75
+          value: quay.io/lucarval/task-buildah:0.1-e149e03e72fcfc324af178909c2fab30f2590104
         - name: kind
           value: task
         resolver: bundles
